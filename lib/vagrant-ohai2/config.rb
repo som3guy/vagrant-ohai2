@@ -1,5 +1,5 @@
 module VagrantPlugins
-  module Ohai
+  module Ohai2
     class Config < Vagrant.plugin(2, :config)
       attr_accessor :enable
       attr_accessor :primary_nic

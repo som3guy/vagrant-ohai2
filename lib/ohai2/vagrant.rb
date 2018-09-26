@@ -39,9 +39,9 @@ Ohai.plugin(:VboxIpaddress) do
   depends 'etc/passwd'
 
   collect_data(:default) do
-  # Ohai hint
+  # Ohai2 hint
     unless File.exist?('/etc/chef/ohai_plugins/vagrant.json')
-      Ohai::Log.fail('Ohai has not set :ipaddress (Missing vagrant.json)')
+      Ohai2::Log.fail('Ohai2 has not set :ipaddress (Missing vagrant.json)')
     else
       vagrant = read_json('/etc/chef/ohai_plugins/vagrant.json')
 
@@ -53,10 +53,10 @@ Ohai.plugin(:VboxIpaddress) do
         nic, addr = lookup_address_by_ipaddress(network, vagrant['private_ipv4'])
       else
         nic, addr = nil, nil
-        Ohai::Log.info("Neither nic nor private_ipv4 are set, skipping")
+        Ohai2::Log.info("Neither nic nor private_ipv4 are set, skipping")
       end
       if addr
-        Ohai::Log.info("Ohai override :ipaddress to #{addr} from #{nic}")
+        Ohai2::Log.info("Ohai2 override :ipaddress to #{addr} from #{nic}")
         ipaddress addr
       end
     end

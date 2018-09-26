@@ -1,5 +1,5 @@
 module VagrantPlugins
-  module Ohai
+  module Ohai2
     #
     module Helpers
       def chef_provisioners
