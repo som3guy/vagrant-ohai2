@@ -4,10 +4,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'vagrant-ohai/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "vagrant-ohai"
+  spec.name          = "vagrant-ohai2"
   spec.version       = VagrantPlugins::Ohai::VERSION
-  spec.authors       = ["Avishai Ish-Shalom"]
-  spec.email         = ["avishai@fewbytes.com"]
+  spec.authors       = ["Jeremy Miller"]
+  spec.email         = ["jmiller3346@gmail.com"]
   spec.description   = %q{Vagrant plugin which installs an Ohai plugn to properly detect private ipaddress}
   spec.summary       = %q{Vagrant plugin which installs an Ohai plugn to properly detect private ipaddress}
   spec.homepage      = ""

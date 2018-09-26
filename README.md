@@ -3,6 +3,8 @@
 This is a [vagrant](http://vagrantup.com) plugin which installs an Ohai plugin providing network information to Chef.
 In particular, the ipaddress is set to the private network defined in vagrant, if one is present.
 
+This is a fork of [Avishai Ish-Shalom](https://github.com/avishai-ish-shalom/vagrant-ohai).
+
 ## Installation
 
     vagrant plugin install vagrant-ohai
